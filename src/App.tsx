@@ -1,25 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import {MainContent} from './MainContent/MainContent';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="PageWrapper">
+        <div className="header"> header content</div>
+        <div className="grow-vertically">
+          <div className="sidebar">Sidebar content</div>
+          <div className="content">
+            <div style={{height: '100%'}}>
+              <MainContent/>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
